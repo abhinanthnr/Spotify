@@ -1,0 +1,551 @@
+
+/* =========================
+   BASIC STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 230px;
+    height: calc(100vh - 90px);
+
+    background: #000;
+    padding: 20px 15px;
+}
+
+.logo {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.logo i {
+    font-size: 30px;
+}
+
+nav a {
+    display: block;
+
+    color: #b3b3b3;
+    text-decoration: none;
+
+    padding: 15px 5px;
+
+    font-weight: bold;
+}
+
+nav a i {
+    width: 30px;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main {
+    margin-left: 230px;
+    margin-bottom: 100px;
+
+    min-height: 100vh;
+
+    background: #121212;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px 30px;
+
+    position: sticky;
+    top: 0;
+
+    background: #121212;
+    z-index: 2;
+}
+
+.topbar input {
+    flex: 1;
+    max-width: 400px;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #242424;
+    color: #fff;
+
+    outline: none;
+}
+
+.login-btn,
+.signup-btn {
+    border: none;
+    border-radius: 25px;
+
+    padding: 12px 22px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: transparent;
+    color: #b3b3b3;
+}
+
+.signup-btn {
+    background: #fff;
+    color: #000;
+}
+
+
+/* =========================
+   MUSIC SECTIONS
+========================= */
+
+.music-section {
+    padding: 25px 30px;
+}
+
+.music-section h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.music-section h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   MUSIC CARDS
+========================= */
+
+.music-container {
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.music-card {
+    background: #181818;
+
+    padding: 15px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    min-width: 0;
+}
+
+.music-card:hover {
+    background: #282828;
+}
+
+.music-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.music-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.music-card p {
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+
+/* =========================
+   POPULAR ARTISTS
+========================= */
+
+.artist-container {
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.artist-card {
+    background: #181818;
+
+    padding: 15px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    min-width: 0;
+}
+
+.artist-card:hover {
+    background: #282828;
+}
+
+
+/* CIRCULAR ARTIST IMAGES */
+
+.artist-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+
+/* ARTIST NAME */
+
+.artist-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ARTIST LABEL */
+
+.artist-card p {
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+
+/* =========================
+   BOTTOM MUSIC PLAYER
+========================= */
+
+.player {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    background: #000;
+    border-top: 1px solid #282828;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr 1fr;
+
+    align-items: center;
+    gap: 20px;
+
+    padding: 10px 20px;
+
+    z-index: 5;
+}
+
+
+/* SONG INFORMATION */
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.song-info img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.song-info h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.song-info p {
+    font-size: 11px;
+    color: #b3b3b3;
+}
+
+
+/* PLAYER BUTTONS */
+
+.player-controls {
+    width: 100%;
+    max-width: 600px;
+
+    justify-self: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+    margin-bottom: 10px;
+
+    color: #b3b3b3;
+}
+
+.buttons i {
+    cursor: pointer;
+}
+
+.buttons i:hover {
+    color: #fff;
+}
+
+.buttons .play {
+    font-size: 30px;
+    color: #fff;
+}
+
+
+/* PROGRESS BAR */
+
+.progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 10px;
+    color: #b3b3b3;
+}
+
+.progress-bar {
+    height: 4px;
+    flex: 1;
+
+    background: #555;
+    border-radius: 5px;
+}
+
+
+/* VOLUME CONTROL */
+
+.volume {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+    color: #b3b3b3;
+}
+
+.volume-bar {
+    width: 80px;
+    height: 4px;
+
+    background: #b3b3b3;
+    border-radius: 5px;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .main {
+        margin-left: 180px;
+    }
+
+
+    /* Music: 3 cards per row */
+
+    .music-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .music-card:nth-child(n+4) {
+        display: none;
+    }
+
+
+    /* Artists: 3 cards per row */
+
+    .artist-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .artist-card:nth-child(n+4) {
+        display: none;
+    }
+
+
+    /* Player */
+
+    .player {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .volume {
+        display: none;
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Hide sidebar */
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+
+    /* Top bar */
+
+    .topbar {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .topbar input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    .signup-btn {
+        padding: 10px 14px;
+    }
+
+
+    /* Section spacing */
+
+    .music-section {
+        padding: 20px 15px;
+    }
+
+    .music-section h1 {
+        font-size: 25px;
+    }
+
+
+    /* Music cards */
+
+    .music-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .music-card:nth-child(n+3) {
+        display: none;
+    }
+
+    .music-card {
+        padding: 10px;
+    }
+
+
+    /* Artist cards */
+
+    .artist-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .artist-card:nth-child(n+3) {
+        display: none;
+    }
+
+    .artist-card {
+        padding: 10px;
+    }
+
+
+    /* Bottom player */
+
+    .player {
+        height: 110px;
+
+        grid-template-columns: 1fr;
+        gap: 5px;
+
+        padding: 8px 12px;
+    }
+
+    .song-info {
+        display: none;
+    }
+
+    .player-controls {
+        max-width: 100%;
+    }
+
+    .buttons {
+        gap: 25px;
+        margin-bottom: 8px;
+    }
+}
