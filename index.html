@@ -1,256 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Spotify Clone</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
 
-        <h2 class="logo">
-            <i class="fa-brands fa-spotify"></i> Spotify
-        </h2>
+        <div class="spotify-logo">
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+        </div>
 
-        <nav>
-            <a href="#">
-                <i class="fa-solid fa-house"></i> Home
+        <nav class="main-nav">
+            <a href="#home" class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
             </a>
 
-            <a href="#">
-                <i class="fa-solid fa-magnifying-glass"></i> Search
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-book"></i> Your Library
+            <a href="#search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
             </a>
         </nav>
 
+        <div class="library-head">
+            <a href="#library">
+                <i class="fa-solid fa-book"></i>
+                <span>Your Library</span>
+            </a>
+
+            <div class="library-actions">
+                <button><i class="fa-solid fa-plus"></i></button>
+                <button><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="library-box">
+            <h3>Create your first playlist</h3>
+            <p>It's easy, we'll help you</p>
+            <button>Create playlist</button>
+        </div>
+
+        <div class="library-box podcast-box">
+            <h3>Let's find some podcasts to follow</h3>
+            <p>We'll keep you updated on new episodes</p>
+            <button>Browse podcasts</button>
+        </div>
+
+        <div class="sidebar-links">
+            <a href="#">Legal</a>
+            <a href="#">Privacy Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">About Ads</a>
+        </div>
+
     </aside>
 
+    
+    <main class="main" id="home">
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
-
-        <!-- TOP BAR -->
         <header class="topbar">
 
-            <input type="text" placeholder="Search for songs or artists">
+            <div class="top-left">
+                <button class="nav-circle">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-            <button class="login-btn">Log in</button>
+                <button class="nav-circle">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
 
-            <button class="signup-btn">Sign up</button>
+            <div class="search-box" id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="What do you want to play?">
+            </div>
+
+            <div class="top-right">
+                <button class="premium-link">Premium</button>
+                <button class="support-link">Support</button>
+                <button class="download-link">
+                    <i class="fa-solid fa-circle-down"></i>
+                    Install App
+                </button>
+
+                <span class="top-divider"></span>
+
+                <button class="signup-btn">Sign up</button>
+                <button class="login-btn">Log in</button>
+            </div>
 
         </header>
 
 
-        <!-- POPULAR MUSIC SECTION -->
-        <section class="music-section">
 
-            <h1>Good Evening</h1>
+        <div class="content">
 
-            <h2>Popular Music</h2>
+            <section class="home-section quick-section">
 
-            <div class="music-container">
+                <h1>Good evening</h1>
 
-                <div class="music-card">
-                    <img src="img/Ninta veedinu.jpg" alt="Ninta Veedinu">
+                <div class="quick-grid">
 
-                    <h3>Ninta Veedinu</h3>
-                    <p>Gajapokkiri</p>
+                    <div class="quick-card">
+                        <img src="img/Ninta veedinu.jpg" alt="Ninta Veedinu">
+                        <div>
+                            <h3>Ninta Veedinu</h3>
+                            <p>Gajapokkiri</p>
+                        </div>
+                        <button class="green-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+
+                    <div class="quick-card">
+                        <img src="img/In-Ghost-House-Inn-Malayalam-2024-20250403152753-500x500.jpg"
+                             alt="Ole Ole Ole">
+                        <div>
+                            <h3>Ole Ole Ole</h3>
+                            <p>In Ghost House Inn</p>
+                        </div>
+                        <button class="green-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+
+                    <div class="quick-card">
+                        <img src="img/black.jpg" alt="Black">
+                        <div>
+                            <h3>Black</h3>
+                            <p>Ambalakkara Thechikavu</p>
+                        </div>
+                        <button class="green-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+
+                    <div class="quick-card">
+                        <img src="img/naran.jpg" alt="Naran">
+                        <div>
+                            <h3>Naran</h3>
+                            <p>Omal Kanmani</p>
+                        </div>
+                        <button class="green-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+
+                    <div class="quick-card">
+                        <img src="img/chennnai express.jpg" alt="Chennai Express">
+                        <div>
+                            <h3>Chennai Express</h3>
+                            <p>One Two Three Four</p>
+                        </div>
+                        <button class="green-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+
+                    <div class="quick-card">
+                        <img src="img/mamooty.jpg" alt="Mammootty Hits">
+                        <div>
+                            <h3>Mammootty Hits</h3>
+                            <p>Chill Music</p>
+                        </div>
+                        <button class="green-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+
                 </div>
 
+            </section>
 
-                <div class="music-card">
-                    <img src="img/In-Ghost-House-Inn-Malayalam-2024-20250403152753-500x500.jpg"
-                    alt="Ole Ole Ole">
 
-                    <h3>Ole Ole Ole</h3>
-                    <p>In Ghost House Inn</p>
+
+            <section class="home-section">
+
+                <div class="section-title">
+                    <h2>Popular Music</h2>
+                    <a href="#">Show all</a>
                 </div>
 
+                <div class="card-row">
 
-                <div class="music-card">
-                    <img src="img/black.jpg" alt="Black">
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/Ninta veedinu.jpg" alt="Ninta Veedinu">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Ninta Veedinu</h3>
+                        <p>Gajapokkiri</p>
+                    </article>
 
-                    <h3>Black</h3>
-                    <p>Ambalakkara Thechikavu</p>
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/In-Ghost-House-Inn-Malayalam-2024-20250403152753-500x500.jpg"
+                                 alt="Ole Ole Ole">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Ole Ole Ole</h3>
+                        <p>In Ghost House Inn</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/black.jpg" alt="Black">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Black</h3>
+                        <p>Ambalakkara Thechikavu</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/naran.jpg" alt="Naran">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Naran</h3>
+                        <p>Omal Kanmani</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/chennnai express.jpg" alt="Chennai Express">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Chennai Express</h3>
+                        <p>One Two Three Four</p>
+                    </article>
+
                 </div>
 
+            </section>
 
-                <div class="music-card">
-                    <img src="img/naran.jpg" alt="Naran">
+            
+            <section class="home-section">
 
-                    <h3>Naran</h3>
-                    <p>Omal Kanmani</p>
+                <div class="section-title">
+                    <h2>Popular Artists</h2>
+                    <a href="#">Show all</a>
                 </div>
 
+                <div class="card-row">
 
-                <div class="music-card">
-                    <img src="img/chennnai express.jpg" alt="Chennai Express">
+                    <article class="artist-card">
+                        <div class="artist-image">
+                            <img src="img/Arijit_Singh.jpg" alt="Arijit Singh">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Arijit Singh</h3>
+                        <p>Artist</p>
+                    </article>
 
-                    <h3>Chennai Express</h3>
-                    <p>One Two Three Four</p>
+                    <article class="artist-card">
+                        <div class="artist-image">
+                            <img src="img/pritam.jpg" alt="Pritam">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Pritam</h3>
+                        <p>Artist</p>
+                    </article>
+
+                    <article class="artist-card">
+                        <div class="artist-image">
+                            <img src="img/Atif Aslam.jpg" alt="Atif Aslam">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Atif Aslam</h3>
+                        <p>Artist</p>
+                    </article>
+
+                    <article class="artist-card">
+                        <div class="artist-image">
+                            <img src="img/shreya.jpg" alt="Shreya Ghoshal">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Shreya Ghoshal</h3>
+                        <p>Artist</p>
+                    </article>
+
+                    <article class="artist-card">
+                        <div class="artist-image">
+                            <img src="img/arman.jpg" alt="Armaan Malik">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Armaan Malik</h3>
+                        <p>Artist</p>
+                    </article>
+
                 </div>
 
+            </section>
+
+
+            <section class="home-section">
+
+                <div class="section-title">
+                    <h2>Popular Radio</h2>
+                    <a href="#">Show all</a>
+                </div>
+
+                <div class="card-row">
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/arjith cover.jpg" alt="Arijit Singh Radio">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Arijit Singh Radio</h3>
+                        <p>With songs from Arijit Singh and similar artists</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/mohanlal radio.jpg" alt="Mohanlal Radio">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Mohanlal Radio</h3>
+                        <p>Malayalam hits and evergreen songs</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/mammoty radio.jpg" alt="Mammootty Radio">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Mammootty Radio</h3>
+                        <p>Popular Malayalam movie songs</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/ar rahman radio.jpg" alt="A R Rahman Radio">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>A.R. Rahman Radio</h3>
+                        <p>Songs from A.R. Rahman and similar artists</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/yesudas.jpg" alt="K J Yesudas Radio">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>K.J. Yesudas Radio</h3>
+                        <p>Evergreen Malayalam melodies</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="home-section">
+
+                <div class="section-title">
+                    <h2>Featured Charts</h2>
+                    <a href="#">Show all</a>
+                </div>
+
+                <div class="chart-row">
+
+                    <article class="chart-item">
+                        <div class="chart-card global">
+                            <i class="fa-brands fa-spotify chart-logo"></i>
+
+                            <div class="chart-big-text">
+                                Top<br>
+                                Songs<br>
+                                <span>Global</span>
+                            </div>
+
+                            <div class="chart-footer">
+                                <b>↗</b>
+                                <strong>Weekly Music Charts</strong>
+                            </div>
+                        </div>
+                        <p>Your weekly update of the most played tracks...</p>
+                    </article>
+
+                    <article class="chart-item">
+                        <div class="chart-card india">
+                            <i class="fa-brands fa-spotify chart-logo"></i>
+
+                            <div class="chart-big-text">
+                                Top<br>
+                                Songs<br>
+                                <span>India</span>
+                            </div>
+
+                            <div class="chart-footer">
+                                <b>↗</b>
+                                <strong>Weekly Music Charts</strong>
+                            </div>
+                        </div>
+                        <p>Your weekly update of the most played tracks...</p>
+                    </article>
+
+                    <article class="chart-item">
+                        <div class="chart-card top-global">
+                            <i class="fa-brands fa-spotify chart-logo"></i>
+
+                            <div class="top50">
+                                <strong>Top 50</strong>
+                                <span></span>
+                                <small>GLOBAL</small>
+                            </div>
+                        </div>
+                        <p>Your daily update of the most played tracks right now...</p>
+                    </article>
+
+                    <article class="chart-item">
+                        <div class="chart-card top-india">
+                            <i class="fa-brands fa-spotify chart-logo"></i>
+
+                            <div class="top50">
+                                <strong>Top 50</strong>
+                                <span></span>
+                                <small>INDIA</small>
+                            </div>
+                        </div>
+                        <p>Your daily update of the most played tracks right now...</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <section class="home-section">
+
+                <div class="section-title">
+                    <h2>Your Music</h2>
+                    <a href="#">Show all</a>
+                </div>
+
+                <div class="card-row">
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/mamooty.jpg" alt="Mammootty Hits">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Mammootty Hits</h3>
+                        <p>Chill Music</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/mani.jpg" alt="Kalabhavan Mani Hits">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Kalabhavan Mani Hits</h3>
+                        <p>Nadan Pattukal</p>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="image-wrap">
+                            <img src="img/mohanlal.jpg" alt="Mohanlal Hits">
+                            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <h3>Mohanlal Hits</h3>
+                        <p>Evergreen Hits</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <footer class="site-footer">
+
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#">About</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">For the Record</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Communities</h3>
+                    <a href="#">For Artists</a>
+                    <a href="#">Developers</a>
+                    <a href="#">Advertising</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Useful links</h3>
+                    <a href="#">Support</a>
+                    <a href="#">Free Mobile App</a>
+                    <a href="#">Popular by Country</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+
+            </footer>
+
+            <div class="copyright">
+                © 2026 Spotify Clone
             </div>
 
-        </section>
-
-
-        <!-- POPULAR ARTISTS SECTION -->
-        <section class="music-section">
-
-            <h2>Popular Artists</h2>
-
-            <div class="artist-container">
-
-                <div class="artist-card">
-                    <img src="img/a r rahman.jpg" alt="A R Rahman">
-
-                    <h3>A R Rahman</h3>
-                    <p>Artist</p>
-                </div>
-
-
-                <div class="artist-card">
-                    <img src="img/m g sreekumar.jpeg" alt="M G Sreekumar">
-
-                    <h3>M G Sreekumar</h3>
-                    <p>Artist</p>
-                </div>
-
-
-                <div class="artist-card">
-                    <img src="img/k s chitra.jpg" alt="K S Chitra">
-
-                    <h3>K S Chitra</h3>
-                    <p>Artist</p>
-                </div>
-
-
-                <div class="artist-card">
-                    <img src="img/Anirudh.jpg" alt="Anirudh">
-
-                    <h3>Anirudh</h3>
-                    <p>Artist</p>
-                </div>
-
-
-                <div class="artist-card">
-                    <img src="img/vijaylakshmi.jpg" alt="Vijaylakshmi">
-
-                    <h3>Vijaylakshmi</h3>
-                    <p>Artist</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- YOUR MUSIC SECTION -->
-        <section class="music-section">
-
-            <h2>Your Music</h2>
-
-            <div class="music-container">
-
-                <div class="music-card">
-                    <img src="img/mamooty.jpg" alt="Mammootty Hits">
-
-                    <h3>Mammootty Hits</h3>
-                    <p>Chill Music</p>
-                </div>
-
-
-                <div class="music-card">
-                    <img src="img/mani.jpg" alt="Kalabhavan Mani Hits">
-
-                    <h3>Kalabhavan Mani Hits</h3>
-                    <p>Nadan Pattukal</p>
-                </div>
-
-
-                <div class="music-card">
-                    <img src="img/mohanlal.jpg" alt="Mohanlal Hits">
-
-                    <h3>Mohanlal Hits</h3>
-                    <p>Evergreen Hits</p>
-                </div>
-
-            </div>
-
-        </section>
+        </div>
 
     </main>
 
 
-    <!-- BOTTOM MUSIC PLAYER -->
     <footer class="player">
 
-        <!-- SONG INFORMATION -->
-        <div class="song-info">
+        <div class="now-playing">
 
             <img src="img/chotta mumbai.jpg" alt="Chotta Mumbai">
 
-            <div>
+            <div class="now-text">
                 <h4>Vascodagama</h4>
                 <p>Chotta Mumbai</p>
             </div>
 
+            <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
         </div>
 
 
-        <!-- PLAYER CONTROLS -->
-        <div class="player-controls">
+        <div class="player-center">
 
-            <div class="buttons">
-
-                <i class="fa-solid fa-shuffle"></i>
-
-                <i class="fa-solid fa-backward-step"></i>
-
-                <i class="fa-solid fa-circle-play play"></i>
-
-                <i class="fa-solid fa-forward-step"></i>
-
-                <i class="fa-solid fa-repeat"></i>
-
+            <div class="player-buttons">
+                <button><i class="fa-solid fa-shuffle"></i></button>
+                <button><i class="fa-solid fa-backward-step"></i></button>
+                <button class="main-play"><i class="fa-solid fa-play"></i></button>
+                <button><i class="fa-solid fa-forward-step"></i></button>
+                <button><i class="fa-solid fa-repeat"></i></button>
             </div>
 
-
-            <!-- PROGRESS BAR -->
-            <div class="progress">
-
+            <div class="timeline">
                 <span>0:00</span>
 
-                <div class="progress-bar"></div>
+                <div class="timeline-bar">
+                    <div class="timeline-progress"></div>
+                </div>
 
                 <span>3:45</span>
-
             </div>
 
         </div>
 
 
-        <!-- VOLUME CONTROL -->
-        <div class="volume">
+        <div class="player-right">
 
+            <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-list"></i>
             <i class="fa-solid fa-volume-high"></i>
 
-            <div class="volume-bar"></div>
+            <div class="volume-bar">
+                <div></div>
+            </div>
+
+            <i class="fa-solid fa-expand"></i>
 
         </div>
 
